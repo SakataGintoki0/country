@@ -1,16 +1,47 @@
-# React + Vite
+## Country Browser (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Browse countries with search, filtering, sorting, and pagination. Built with React, Vite, Tailwind CSS, and TanStack Table.
 
-Currently, two official plugins are available:
+### Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1) Install dependencies
 
-## React Compiler
+```
+npm install
+```
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2) Start the dev server
 
-## Expanding the ESLint configuration
+```
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3) Open the app
+
+```
+http://localhost:5173
+```
+
+### Features
+
+- **Data fetching**: Country data from `restcountries.com` via `src/api.js` (`getData`).
+- **Table (TanStack Table)**:
+  - **Pagination**: Client-side with page size selector and Prev/Next controls.
+  - **Sorting**: Chevron icons (Lucide) to sort ascending/descending per column.
+  - **Global search**: Filters across name, capital, region, subregion, timezone, currencies, and Google Maps link.
+  - **Column filters**: Per-column text filters for all sortable columns.
+  - **Columns**: Common Name, Official Name, Capital, Currency, Region, Subregion, Timezone, Google Maps (link), Flag.
+- **Region tabs**: Header tabs to filter by region (plus All).
+
+### Tech Stack
+
+- React + Vite
+- Tailwind CSS (v4 syntax)
+- TanStack Table (`@tanstack/react-table`)
+- Lucide React icons (`lucide-react`)
+
+### Scripts
+
+- `npm run dev` – start dev server
+- `npm run build` – production build
+- `npm run preview` – preview production build locally
