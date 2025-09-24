@@ -45,3 +45,7 @@ http://localhost:5173
 - `npm run dev` – start dev server
 - `npm run build` – production build
 - `npm run preview` – preview production build locally
+
+### Screenshot
+
+![Country Browser screenshot](./screenshots/country.png)
